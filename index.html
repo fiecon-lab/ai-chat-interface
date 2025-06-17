@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Assistant Widget Preview</title>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🤖</text></svg>">
+    <script src="https://unpkg.com/feather-icons"></script>
+    <style>
+        body {
+            margin: 0;
+            padding: 20px;
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+            min-height: 100vh;
+        }
+        .preview-content {
+            max-width: 800px;
+            margin: 0 auto;
+            background: white;
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        h1 {
+            color: #333;
+            margin-bottom: 20px;
+        }
+        p {
+            color: #666;
+            line-height: 1.6;
+            margin-bottom: 15px;
+        }
+    </style>
+</head>
+<body>
+    <div class="preview-content">
+        <h1>AI Assistant Widget Preview</h1>
+        <p>This is a preview page to demonstrate the AI assistant widget.</p>
+        <p>The AI assistant FAB button should appear in the bottom right corner of the screen.</p>
+        <p>Click on it to open the chat interface and test the functionality.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+        <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+    </div>
+
+    <!-- AI Assistant Widget -->
+    <script src="ai-assistant-widget.js"></script>
+    <script>
+        // Initialize the widget with custom branding
+        const assistant = new AIAssistantWidget({
+            primaryColor: '#174040',
+            secondaryColor: '#5A9A48',
+            fontFamily: 'Arial, sans-serif',
+            assistantName: 'Cria',
+            model: 'qwen3:14b',
+            ollamaEndpoint: 'http://localhost:11434',
+            maxHistoryMessages: 8,
+            useCases: [
+                { label: 'Bug Report', prompt: 'You are a technical support engineer...' },
+                { label: 'Feature Request', prompt: 'You are a product manager...' }
+            ]
+        });
+    </script>
+</body>
+</html> 
